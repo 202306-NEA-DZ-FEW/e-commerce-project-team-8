@@ -2,7 +2,7 @@
 
 ## Overview
 
-One of the projects you will definitely have to work on is creating an e-commerce website. E-commerce websites are among the most common types of websites on the internet. Gaining experience in building e-commerce frontends provides practical, real-world development experience that is very valuable. Also, you will get to work with a CRUD application. You will get to test out at least two of the basic operations for managing data.
+One of the projects you will definitely have to work on is creating an e-commerce website. E-commerce websites are among the most common types of websites on the internet. Gaining experience in building e-commerce frontends provides practical, real-world development experience that is very valuable. Also, you will get to work with a CRUD application. You will get to test out at least two of the basic operations for managing data. This will be great project.
 
 ## Requirements
 
