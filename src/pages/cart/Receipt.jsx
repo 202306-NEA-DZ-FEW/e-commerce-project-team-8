@@ -1,7 +1,7 @@
 
 import React from "react";
 import styles from"@/styles/cart.module.css"
- export default function ({products}){
+ export default function Receipt({products}){
   return (
     <>
     <div className={styles.table} class="text-sm leading-8 ">

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Receit from "./Receit";
+import Receipt from "./Receipt";
 export default function Table({ initialProducts }) {
   const [products, setProducts] = useState(initialProducts);
 
@@ -63,7 +63,7 @@ export default function Table({ initialProducts }) {
       </table>
       </div>
       <div class='shadow-lg rounded-md my-10 basis-1/6 h-16 md:h-full w-full semi-rounded-full border border-gray-200 p-4 '>
-      <Receit products={products} />
+      <Receipt products={products} />
       </div>
     
     </div>
