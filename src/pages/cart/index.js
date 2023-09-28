@@ -1,8 +1,8 @@
 import React from "react";
-import Table from "./Table";
+import Cart from "./Cart";
 import styles from "@/styles/cart.module.css"
 
-export default function Cart() {
+export default function Main() {
   const initialProducts = [
     { name: "Product 1", price: 10.99, quantity: 1 },
     { name: "Product 2", price: 19.99, quantity: 1 },
@@ -10,9 +10,9 @@ export default function Cart() {
   ];
   
   return (
-    <div class='container  m-20'>
-      {/* <h1>Shopping Cart</h1> */}
-      <Table initialProducts={initialProducts} />
+    <div className={styles.main}>
+    
+      <Cart initialProducts={initialProducts} />
       
     </div>
   );
