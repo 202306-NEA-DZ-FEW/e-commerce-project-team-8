@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white p-2 text-white">
+    <nav id='top' className="bg-white p-2 text-white">
       <div className="container mx-auto flex justify-between items-center py-0">
         {/* Logo */}
         <div className="text-2xl font-bold top-0 left-0">
