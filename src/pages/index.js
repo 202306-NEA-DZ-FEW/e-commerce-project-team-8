@@ -43,6 +43,31 @@ export default function Home({ products }) {
         </h1>
         <HomeProductsCards products={products} />
       </section>
+      <section>
+        <div className="flex flex-wrap items-center p-12">
+          <div className="lg:w-1/2">
+            <Image src={about} />
+          </div>
+          <div className="lg:w-1/2">
+            <h2 className="lg:ml-12 lg:text-3xl font-bold mt-5 mb-5 text-4xl">
+              About Us
+            </h2>
+            <p className="lg:ml-12 lg:text-xl leading-6 lg:leading-9">
+              At So9ify, we are a dedicated team of individuals united by a
+              passion for bringing you an exceptional online shopping
+              experience. Our focus is on offering a carefully curated selection
+              of high-quality men and women clothing, exquisite jewelry, and
+              cutting-edge electronics. We believe that shopping should be easy,
+              enjoyable, and tailored to your unique preferences. With a
+              commitment to customer satisfaction and a drive to provide the
+              latest trends, we invite you to explore our store and discover the
+              perfect items to enhance your lifestyle. Thank you for choosing
+              So9ify as your trusted online shopping destination. Welcome to a
+              world of convenience and style.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }
