@@ -5,11 +5,11 @@ import { useState } from "react"
 function Navbar() {
   const [navbar, setNavbar] = useState(false)
   return (
-    <div>
-      <nav className="w-full bg-white text-black fixed top-0 left-0 right-0 z-10">
-        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+    <div className="h-25">
+      <nav className="w-full bg-white text-black fixed top-0 left-0 right-0 z-10 h-25">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8 h-25">
           <div>
-            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center justify-between py-3  md:block">
               {/* LOGO */}
               <div className="text-2xl font-bold top-0 left-0">
                 <Link href="/" className="top-0 left-0">
@@ -17,7 +17,7 @@ function Navbar() {
                   <img
                     src="/So9ify-logo.ico"
                     alt="So9ify"
-                    className="top-0 left-0 py-0"
+                    className="top-0 left-0 py-0 w-40 h-25"
                   />
                 </Link>
               </div>
@@ -54,17 +54,17 @@ function Navbar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl  py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-gray-900  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
+                <li className="pb-2 text-base  py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-gray-900  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Home
                   </Link>
                 </li>
-                <li className="pb-6 text-xl py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
+                <li className="pb-2 text-base py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
                   <Link href="/products" onClick={() => setNavbar(!navbar)}>
-                    Browse Products
+                    Browse
                   </Link>
                 </li>
-                <li className="pb-6 text-xl  py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
+                <li className="pb-2 text-base  py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-gray-600  border-gray-900  md:hover:text-gray-600 md:hover:bg-transparent">
                   <Link
                     href="/cart"
                     className="flex justify-center"
@@ -74,7 +74,7 @@ function Navbar() {
                     <img
                       src="/cart-icon.png"
                       alt="cart"
-                      className="w-4 h-4 mt-2 ml-2"
+                      className="w-4 h-4 mt-1 ml-2"
                     />
                   </Link>
                 </li>
