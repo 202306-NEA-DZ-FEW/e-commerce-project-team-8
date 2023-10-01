@@ -69,45 +69,59 @@ export default function Cart() {
 
   return (
     <>
-      <header className={styles.cartHead}>Shopping Cart:</header>
+      <h1 className={styles.cartHead}>Shopping Cart</h1>
       <section className={styles.cart}>
         <div className={styles.productTable}>
           <table class="w-full mx-5 my-10 p-2">
-            <thead
-              style={{ width: "936px", height: "44px", fontWeight: "200" }}
-              class="bg-[#F1F3F4] text-sm font-sans  mx-10"
-            >
+            <thead className={styles.thead}>
               <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Remove from cart</th>
+                <th className={styles.theadItem}>
+                  <p style={{ marginInlineEnd: "80%" }}>Product</p>
+                </th>
+                <th className={styles.theadItem}>Price</th>
+                <th className={styles.theadItem}>Quantity</th>
+                <th></th>
               </tr>
             </thead>
 
-            <tbody class=" bg-slate-40/100 m-4">
+            <tbody class=" bg-slate-40/100 text-xs">
               {products.map((product, index) => (
                 <tr
                   style={{ borderBottom: "solid #E0E2E3 1px" }}
                   key={product.id}
                 >
-                  <td style={{ textIndent: "25%" }}>
-                    <img style={{ width: "60px" }} src={product.image} alt="" />
-                    {product.title}
+                  <td
+                    style={{
+                      display: "flex",
+                      padding: "6%",
+                      marginRight: "10%",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img
+                      style={{ width: "20%", marginRight: "6%" }}
+                      src={product.image}
+                      alt={product.title}
+                    />
+                    <span style={{ alignItems: "baseline" }}>
+                      {product.title}
+                    </span>
                   </td>
+
                   <td style={{ textIndent: "25%" }}>
-                    ${product.price.toFixed(2)}
+                    <div className="mx-2">${product.price.toFixed(2)}</div>
                   </td>
-                  <td style={{ textIndent: "40%" }}>
+
+                  <td style={{ padding: "2%" }}>
                     <input
                       style={{
                         padding: "1%",
-                        textIndent: "45%",
+                        textIndent: "50%",
                         border: "rgb(220,220,220) 1px solid",
-                        margin: "3%",
-                        width: "60px",
-                        borderRadius: "20px",
-                        height: "34px",
+                        margin: "2%",
+                        width: "80%",
+                        borderRadius: "5px",
+                        height: "150%",
                       }}
                       type="number"
                       min="1"
@@ -119,12 +133,11 @@ export default function Cart() {
                       }}
                     />
                   </td>
-                  <td class="flex justify-center ">
+                  <td>
                     <button
-                      class="px-4 my-10 py-1 text-sm text-[#818487]  hover:text-[#e74c3c]  hover:border-transparent focus:outline-none focus:ring-2 focus:ring-[#821f40] focus:ring-offset-2"
+                      class="px-2 my-10 py-1 text-sm text-[#818487]  hover:text-[#e74c3c]  hover:border-transparent focus:outline-none focus:ring-2 focus:ring-[#821f40] focus:ring-offset-2"
                       onClick={() => handleRemove(product.id)}
                     >
-                      {" "}
                       <span style={{ color: "black" }}>X</span>Remove
                     </button>
                   </td>
@@ -138,7 +151,7 @@ export default function Cart() {
                 <td></td>
                 <td class="flex justify-center my-10">
                   <button
-                    class="px-4 py-1 text-sm text-black   hover:text-white hover:bg-[#3498db] hover:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2"
+                    class=" px-1 py-2 text-sm text-black   hover:text-white hover:bg-[#3498db] border border-[#818487] border-inherit hover:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2"
                     onClick={handleClear}
                   >
                     Clear cart
