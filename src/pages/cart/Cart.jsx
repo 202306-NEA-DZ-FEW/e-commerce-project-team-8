@@ -109,7 +109,9 @@ export default function Cart() {
                   </td>
 
                   <td style={{ textIndent: "25%" }}>
-                    <div className="mx-2">${product.price.toFixed(2)}</div>
+                    <div className="mx-2">
+                      ${parseInt(product.price).toFixed(2)}
+                    </div>
                   </td>
 
                   <td style={{ padding: "2%" }}>
