@@ -27,7 +27,7 @@ export default function Home({ products }) {
             Explore a curated collection of fashion and electronics
           </p>
           <Link
-            href="#"
+            href="/products"
             className="inline-block py-[0.5rem] px-[1.8rem] mt-[3rem] text-center border-2 transition-all duration-500 ease-in-out border-white text-white hover:bg-[#821f40] hover:text-white hover:border-none "
           >
             <button>Shop Now</button>

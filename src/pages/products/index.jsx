@@ -11,6 +11,7 @@ export default function Products({ data, max }) {
   const [maxPrice, setMaxPrice] = useState(1000)
   const [rating, setRating] = useState()
   const [name, setName] = useState("")
+  const [category, setCategory] = useState("All Products")
 
   const filterByPrice = () => {
     return data.filter(
@@ -57,9 +58,9 @@ export default function Products({ data, max }) {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="ml-72 mt-28">
+      <div className="ml-10 mt-28">
         <div className="category">
-          <h1 className="text-3xl">{"Men's Clothing"}</h1>
+          <h1 className="text-3xl">{category}</h1>
         </div>
 
         <div className="main-wrapper mt-16 flex">
@@ -95,16 +96,30 @@ export default function Products({ data, max }) {
             <div className="categories-filter mt-16">
               <h3 className="text-xl">Categories</h3>
               <div className="categories-wrapper  flex flex-col gap-4 mt-4 text-gray-600">
-                <Link href={"/products?category=men's clothing"}>
+                <Link
+                  href={"/products?category=men's clothing"}
+                  onClick={() => setCategory("Men's clothing")}
+                >
                   {"Men's clothing"}
                 </Link>
-                <Link href={"/products?category=women's clothing"}>
+                <Link
+                  href={"/products?category=women's clothing"}
+                  onClick={() => setCategory("Women's clothing")}
+                >
                   {"Women's clothing"}
                 </Link>
-                <Link href={"/products?category=electronics"}>
+                <Link
+                  href={"/products?category=electronics"}
+                  onClick={() => setCategory("Electronics")}
+                >
                   {"Electronics"}
                 </Link>
-                <Link href={"/products?category=jewelery"}>{"Jewelery"}</Link>
+                <Link
+                  href={"/products?category=jewelery"}
+                  onClick={() => setCategory("Jewelery")}
+                >
+                  {"Jewelery"}
+                </Link>
               </div>
             </div>
           </div>
@@ -123,14 +138,16 @@ export default function Products({ data, max }) {
 
 export async function getServerSideProps(ctx) {
   const { category } = ctx.query
-  console.log("heeey", category)
-  const data = await fetch(
-    "https://fakestoreapi.com/products/category/" + category,
-  )
+  let apiUrl = "https://fakestoreapi.com/products"
+
+  if (category) {
+    apiUrl += `/category/${category}`
+  }
+
+  const data = await fetch(apiUrl)
   const result = await data.json()
   const prices = result.map((product) => product.price)
   const biggestPrice = Math.max(...prices)
-  console.log("data", biggestPrice)
 
   return {
     props: {
