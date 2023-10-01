@@ -18,7 +18,7 @@ function HomeProductsCards({ products }) {
               <p className={styles.productPrice}>${product.price}</p>
               <h2 className={styles.productTitle}>{product.title}</h2>
               <Link
-                href="#"
+                href={`products/${product.id}`}
                 className="inline-block py-[0.5rem] px-[1.8rem] mt-[3rem] text-center border-2 transition-all duration-500 ease-in-out border-black hover:bg-[#821f40] hover:text-white hover:border-none "
               >
                 <button>Shop Now</button>

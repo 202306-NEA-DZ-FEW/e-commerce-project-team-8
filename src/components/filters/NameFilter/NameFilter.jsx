@@ -2,7 +2,7 @@ import React from "react"
 
 export default function NameFilter({ setName, name }) {
   return (
-    <form className="flex items-center">
+    <form className="flex items-center" onSubmit={(e) => e.preventDefault()}>
       <label for="simple-search" className="sr-only">
         Search
       </label>
