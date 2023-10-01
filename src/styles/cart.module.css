@@ -1,70 +1,74 @@
 @media screen and (max-width: 992px) {
-    .cartHead{
-        text-indent:20px;
-        font-size:24px;
-        font-weight:400;
-        font-family:Jost;
-    }
-    .main{
-        box-sizing: border-box; 
-        margin:10px 10px 10px 10px;   
-    }
-    .cart {
-        display: flex;
-        flex-direction: column;
-    }
-    .receipt {
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
-        padding: 10px;
-     /* Adjust the width as needed */
-        font-family: Arial, sans-serif;
-    }
-    /* Add styling for the last element as needed */
+  .cartHead {
+    text-indent: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: Jost;
+  }
+  .main {
+    box-sizing: border-box;
+    margin: 10px 10px 10px 10px;
+  }
+  .cart {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .receipt {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 10px;
+    /* Adjust the width as needed */
+    font-family: Arial, sans-serif;
+  }
+  /* Add styling for the last element as needed */
 }
 
 @media screen and (min-width: 992px) {
-    .cartHead{
-        text-indent:200px;
-        font-size:44px;
-        font-weight:400;
-        font-family:Jost
-    }
-    .main{
-        box-sizing: border-box; 
-        margin:10px 20px 20px;   
-    }
-    .cart {
-        box-sizing: border-box;
-        display: flex;
-        align-items:first baseline;
-        justify-content: flex-end; /* Distribute remaining space between elements */
-        max-width: 100%;
-        
-    }
-    .receipt {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
-        padding: 20px;
-        width: 50%; /* Adjust the width as needed */
-        font-family: Arial, sans-serif;
-    }
-    .productTable {
-        line-height: 26px;
-        font-size: 14px;
-        width: calc(100% - 20px); /* Calculate width with margin (adjust margin as needed) */
-        margin-left: 180px;/* Add margin to the right of the product table */
-        padding: 2%;
-        font-family: Arial, sans-serif;
-        margin-right: 20px;
-    }
+  .cartHead {
+    text-indent: 200px;
+    font-size: 44px;
+    font-weight: 400;
+    font-family: Jost;
+  }
+  .main {
+    box-sizing: content-box;
+    margin: 10px 20px 20px;
+    height: calc(100%-1200px);
+    overflow: auto;
+  }
+  .main::-webkit-scrollbar {
+    display: none;
+  }
+  .cart {
+    box-sizing: content-box;
+    display: flex;
+    align-items: first baseline;
+    justify-content: flex-end; /* Distribute remaining space between elements */
+    max-width: 100%;
+  }
+  .receipt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    padding: 1%;
+    width: 100%; /* Adjust the width as needed */
+    font-family: Arial, sans-serif;
+  }
+  .productTable {
+    line-height: 26px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    font-family: Arial, sans-serif;
+  }
 }

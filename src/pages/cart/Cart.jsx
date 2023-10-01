@@ -70,87 +70,81 @@ export default function Cart() {
   return (
     <>
       <header className={styles.cartHead}>Shopping Cart:</header>
-      <section className={styles.cart}>
+      <div className={styles.cart}>
         <div className={styles.productTable}>
-          <table class="w-full mx-5 my-10 p-2">
-            <thead
-              style={{ width: "936px", height: "44px", fontWeight: "200" }}
-              class="bg-[#F1F3F4] text-sm font-sans  mx-10"
-            >
-              <tr>
-                <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Remove from cart</th>
-              </tr>
-            </thead>
-
-            <tbody class=" bg-slate-40/100 m-4">
-              {products.map((product, index) => (
-                <tr
-                  style={{ borderBottom: "solid #E0E2E3 1px" }}
-                  key={product.id}
+          <div
+            style={{ width: "936px", height: "44px", fontWeight: "200" }}
+            class="bg-[#F1F3F4] text-sm font-sans  mx-10 flex flex-row gap-x-40 p-2 "
+          >
+            <p className="w-64 font-medium">Product</p>
+            <p className="font-medium">Price</p>
+            <p className="font-medium">Quantity</p>
+            <p className="font-medium ">Remove </p>
+          </div>
+          <div
+            style={{ width: "936px", height: "44px", fontWeight: "200" }}
+            class=" mx-5 my-10 p-2 bg-slate-40/100 "
+          >
+            {products.map((product, index) => (
+              <div
+                style={{ borderBottom: "solid #E0E2E3 1px" }}
+                key={product.id}
+                className="flex flex-row gap-x-32 items-center"
+              >
+                <div
+                  className="flex flex-col items-center p-4"
+                  style={{ textIndent: "1%" }}
                 >
-                  <td style={{ textIndent: "25%" }}>
-                    <img src="" alt="" />
-                    {product.title}
-                  </td>
-                  <td style={{ textIndent: "25%" }}>
-                    ${product.price.toFixed(2)}
-                  </td>
-                  <td style={{ textIndent: "40%" }}>
-                    <input
-                      style={{
-                        padding: "1%",
-                        textIndent: "45%",
-                        border: "rgb(220,220,220) 1px solid",
-                        margin: "3%",
-                        width: "100px",
-                        borderRadius: "20px",
-                        height: "34px",
-                      }}
-                      type="number"
-                      min="1"
-                      value={product.quantity}
-                      onChange={(e) => {
-                        const newQuantity = parseInt(e.target.value, 10)
-                        handleQuantityChange(index, newQuantity)
-                        console.log(index, newQuantity)
-                      }}
-                    />
-                  </td>
-                  <td class="flex justify-center ">
-                    <button
-                      class="px-4 my-10 py-1 text-sm text-[#818487]  hover:text-[#e74c3c]  hover:border-transparent focus:outline-none focus:ring-2 focus:ring-[#821f40] focus:ring-offset-2"
-                      onClick={() => handleRemove(product.id)}
-                    >
-                      {" "}
-                      <span style={{ color: "black" }}>X</span>Remove
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-            <tfoot>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td class="flex justify-center my-10">
+                  {product.title}
+                  <img
+                    className="w-16"
+                    src={product.image}
+                    alt={product.title}
+                  />
+                </div>
+                <p>${product.price.toFixed(2)}</p>
+                <p>
+                  <input
+                    style={{
+                      padding: "1%",
+                      textIndent: "45%",
+                      border: "rgb(220,220,220) 1px solid",
+                      width: "80px",
+                      borderRadius: "20px",
+                    }}
+                    type="number"
+                    min="1"
+                    value={product.quantity}
+                    onChange={(e) => {
+                      const newQuantity = parseInt(e.target.value, 10)
+                      handleQuantityChange(index, newQuantity)
+                      console.log(index, newQuantity)
+                    }}
+                  />
+                </p>
+                <div class="flex justify-center ">
                   <button
-                    class="px-4 py-1 text-sm text-black   hover:text-white hover:bg-[#3498db] hover:border-transparent focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2"
-                    onClick={handleClear}
+                    class="px-4 my-10 py-1 text-sm text-[#818487]  hover:text-[#e74c3c]  hover:border-transparent focus:outline-none focus:ring-2 focus:ring-[#821f40] focus:ring-offset-2"
+                    onClick={() => handleRemove(product.id)}
                   >
-                    Clear cart
+                    <span style={{ color: "black" }}>X</span>Remove
                   </button>
-                </td>
-              </tr>
-            </tfoot>
-          </table>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <Receipt products={products} />
-      </section>
+      </div>
+      <div>
+        <button
+          class="px-4 py-1 text-sm text-black   hover:text-white hover:bg-[#3498db] hover:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 mt-1 ms-[74%] "
+          onClick={handleClear}
+        >
+          Clear cart
+        </button>
+      </div>
     </>
   )
 }

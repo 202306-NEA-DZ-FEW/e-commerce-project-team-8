@@ -1,7 +1,7 @@
 // components/Navbar.js
 
-import Link from 'next/link';
-import { useState } from 'react';
+import Link from "next/link"
+import { useState } from "react"
 // import {Poppins} from "next/font/google"
 
 // const poppins = Poppins({
@@ -11,20 +11,27 @@ import { useState } from 'react';
 // })
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(false)
   //Maybe add a purge option in the config file.
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode(!darkMode)
     // Implement dark mode logic here by updating CSS classes
-  };
+  }
 
   return (
-    <nav id='top' className="bg-white p-2 text-white">
+    <nav id="top" className="bg-white p-2 text-white">
       <div className="container mx-auto flex justify-between items-center py-0">
         {/* Logo */}
         <div className="text-2xl font-bold top-0 left-0">
-          <Link href="/" className='top-0 left-0'> <img src="/So9ify-logo.ico" alt="So9ify" className='top-0 left-0 py-0' /></Link>
+          <Link href="/" className="top-0 left-0">
+            {" "}
+            <img
+              src="/So9ify-logo.ico"
+              alt="So9ify"
+              className="top-0 left-0 py-0"
+            />
+          </Link>
         </div>
 
         {/* Dark Mode Toggle */}
@@ -37,7 +44,7 @@ const Navbar = () => {
           >
             {darkMode ? 'Light Mode' : 'Dark Mode'}
           </button> */}
-     {/* <label className="switch">
+          {/* <label className="switch">
             <input type="checkbox" checked={darkMode} onChange={toggleDarkMode} />
             <span className="slider"></span>
           </label> */}
@@ -60,7 +67,7 @@ const Navbar = () => {
         </div> */}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

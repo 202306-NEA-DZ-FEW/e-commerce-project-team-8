@@ -6,8 +6,18 @@ export default function Receipt({ products }) {
       <h1 style={{ fontWeight: "bold" }}>Your Receipt:</h1>
       <div style={{ width: "100%" }}>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
-          <span style={{ fontWeight: "normal", marginLeft: "45%" }}>price</span>
-          <span style={{ fontWeight: "normal" }}>Quantity</span>
+          <span
+            style={{
+              fontSize: "12px",
+              fontWeight: "normal",
+              marginLeft: "45%",
+            }}
+          >
+            price
+          </span>
+          <span style={{ fontSize: "12px", fontWeight: "normal" }}>
+            Quantity
+          </span>
         </div>
         <br></br>
         <div style={{ fontSize: "12px" }}>
