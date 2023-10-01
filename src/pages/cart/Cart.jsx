@@ -92,7 +92,7 @@ export default function Cart() {
                   key={product.id}
                 >
                   <td style={{ textIndent: "25%" }}>
-                    <img src="" alt="" />
+                    <img style={{ width: "60px" }} src={product.image} alt="" />
                     {product.title}
                   </td>
                   <td style={{ textIndent: "25%" }}>
@@ -105,7 +105,7 @@ export default function Cart() {
                         textIndent: "45%",
                         border: "rgb(220,220,220) 1px solid",
                         margin: "3%",
-                        width: "100px",
+                        width: "60px",
                         borderRadius: "20px",
                         height: "34px",
                       }}
