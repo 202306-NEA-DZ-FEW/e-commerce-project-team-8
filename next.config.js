@@ -3,9 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-
 module.exports = {
   images: {
-    domains: ['fakestoreapi.com'],
+    domains: ["fakestoreapi.com"],
   },
 }
