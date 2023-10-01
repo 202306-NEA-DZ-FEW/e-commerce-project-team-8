@@ -12,7 +12,7 @@ const Footer = () => {
         </p>
 
         {/* Social Media Links */}
-        <div className="pb-5 pr-28">
+        <div className="pb-5 pr-28 hidden sm:block">
           <div className=" text-black text-center py-5 font-bold">
             Participating Members:
           </div>
@@ -161,7 +161,7 @@ const Footer = () => {
           href="https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8"
           className="text-blue-500 hover:text-blue-700"
         >
-          Team-8
+          Alpha Team
         </a>
       </p>
     </footer>
