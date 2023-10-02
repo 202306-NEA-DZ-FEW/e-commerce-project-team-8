@@ -1,5 +1,8 @@
 # So9ify E-commerce Website
-
+![home page 1](https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8/assets/127650953/dcff4924-90bf-4f0c-83bf-c8fe3a901119)
+![all products page](https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8/assets/127650953/41c91023-b0e7-4b6c-8302-8e61fe663a00)
+![single p page](https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8/assets/127650953/b3c484c4-f49a-4e99-9fb4-c1a9e181d057)
+![cart page](https://github.com/202306-NEA-DZ-FEW/e-commerce-project-team-8/assets/127650953/76e797fa-e132-4efb-8bb4-c1fbff521d19)
 
 
 # Description
