@@ -27,21 +27,22 @@ export default function Receipt({ products }) {
         </div>
         <br></br>
         <div className="ms-5 text-xs">
-          {products.map((product, index) => (
-            <div className="flex flex-row" key={index}>
-              <span className="truncate basis-3/4">{product.title}</span>
-              <span
-                className="truncate basis-3/5 mx-1"
-                style={{ color: "#3498db" }}
-              >
-                $ {product.price}
-              </span>
-              <span className="truncate basis-1/5">
-                {" "}
-                <span style={{ color: "red" }}>*</span> {product.quantity}
-              </span>
-            </div>
-          ))}
+          {products &&
+            products.map((product, index) => (
+              <div className="flex flex-row" key={index}>
+                <span className="truncate basis-3/4">{product.title}</span>
+                <span
+                  className="truncate basis-3/5 mx-1"
+                  style={{ color: "#3498db" }}
+                >
+                  $ {product.price}
+                </span>
+                <span className="truncate basis-1/5">
+                  {" "}
+                  <span style={{ color: "red" }}>*</span> {product.quantity}
+                </span>
+              </div>
+            ))}
         </div>
         <div
           className="mx-2 font-semibold my-2 text-base text-black"
