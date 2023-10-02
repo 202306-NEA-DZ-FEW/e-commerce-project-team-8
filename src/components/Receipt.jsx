@@ -27,7 +27,7 @@ export default function Receipt({ products }) {
         </div>
         <br></br>
         <div className="ms-5 text-xs">
-          {products &&
+          {products.length > 0 ? (
             products.map((product, index) => (
               <div className="flex flex-row" key={index}>
                 <span className="truncate basis-3/4">{product.title}</span>
@@ -42,7 +42,10 @@ export default function Receipt({ products }) {
                   <span style={{ color: "red" }}>*</span> {product.quantity}
                 </span>
               </div>
-            ))}
+            ))
+          ) : (
+            <p>No products in the cart</p>
+          )}
         </div>
         <div
           className="mx-2 font-semibold my-2 text-base text-black"
