@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "@/util/firebase"
+import { auth } from "@/config/config"
 
 export default function Signup() {
   const [email, setEmail] = useState("")

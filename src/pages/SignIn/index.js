@@ -3,7 +3,7 @@ import Link from "next/link"
 // import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react"
 import { signInWithEmailAndPassword } from "firebase/auth"
-import { auth } from "@/util/firebase"
+import { auth } from "@/config/config"
 
 export default function SignIn() {
   const [email, setEmail] = useState("")
