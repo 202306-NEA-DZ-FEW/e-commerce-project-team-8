@@ -35,9 +35,6 @@ export default function Home({ products }) {
         </article>
       </header>
       <section className="bg-neutral-100 p-10">
-        <h3 className="text-center text-xl mb-5 text-red-500 font-bold">
-          Shop by Category
-        </h3>
         <h1 className="text-center text-3xl mb-5 font-bold">
           Popular on the So9ify store
         </h1>

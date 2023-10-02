@@ -69,7 +69,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-center flex-col">
               <a
-                href="https://www.linkedin.com/in/ahmed-djebnoune-ab840b111/"
+                href="https://www.linkedin.com/in/ahmed-djebnoune-ab640b111/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -105,7 +105,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://github.com/member1"
+                href="https://github.com/mounibzaidi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -118,7 +118,7 @@ const Footer = () => {
             </div>
             <div className="flex justify-cente flex-col">
               <a
-                href="https://www.linkedin.com/in/member1"
+                href="https://www.linkedin.com/in/mohammed-bennaceur-571b89194"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -130,7 +130,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://github.com/member1"
+                href="https://github.com/medshk"
                 target="_blank"
                 rel="noopener noreferrer"
               >
