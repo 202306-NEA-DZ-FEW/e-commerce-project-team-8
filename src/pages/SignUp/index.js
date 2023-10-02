@@ -7,22 +7,22 @@ export default function Signup() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const signUp = (e) => {
-    e.preventDefault()
-    // Put the signUp code here
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        // Signed up
-        console.log(userCredential)
-        const user = userCredential.user
-        // ...
-      })
-      .catch((error) => {
-        const errorCode = error.code
-        const errorMessage = error.message
-        // ..
-      })
-  }
+  // const signUp = (e) => {
+  //   e.preventDefault()
+  //   // Put the signUp code here
+  //   createUserWithEmailAndPassword(auth, email, password)
+  //     .then((userCredential) => {
+  //       // Signed up
+  //       console.log(userCredential)
+  //       const user = userCredential.user
+  //       // ...
+  //     })
+  //     .catch((error) => {
+  //       const errorCode = error.code
+  //       const errorMessage = error.message
+  //       // ..
+  //     })
+  // }
   return (
     <>
       <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
